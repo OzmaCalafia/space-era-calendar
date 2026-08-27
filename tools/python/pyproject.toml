@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "space-era"
+version = "1.0.0"
+authors = [
+  { name="Ozma Calafia" }
+]
+description = "Reference implementation of the Space Era (SE) Calendar Standard (v1.0)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "CC BY-SA 4.0" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+]
