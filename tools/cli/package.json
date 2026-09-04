@@ -1,0 +1,12 @@
+{
+  "name": "space-era-cli",
+  "version": "1.0.0",
+  "description": "Command-line tool for converting and auditing time using the Space Era Calendar Standard",
+  "type": "module",
+  "bin": {
+    "space-era": "./bin/cli.js"
+  },
+  "dependencies": {
+    "space-era-calendar": "file:../javascript"
+  }
+}
