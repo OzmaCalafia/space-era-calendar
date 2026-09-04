@@ -1,0 +1,27 @@
+{
+  "name": "space-era-calendar",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Official JavaScript implementation of the Space Era Calendar Standard (v1.0)",
+  "main": "src/core.js",
+  "exports": {
+    ".": "./src/core.js"
+  },
+  "scripts": {
+    "test": "node --test"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "[https://github.com/OzmaCalafia/space-era-calendar.git](https://github.com/OzmaCalafia/space-era-calendar.git)"
+  },
+  "keywords": [
+    "space-era",
+    "calendar",
+    "standard",
+    "timekeeping",
+    "universal-translator"
+  ],
+  "author": "Ozma Calafia",
+  "license": "CC-BY-SA-4.0"
+}
