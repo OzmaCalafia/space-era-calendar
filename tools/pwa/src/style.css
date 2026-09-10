@@ -1,0 +1,161 @@
+@import '@fontsource/ubuntu/300.css';
+@import '@fontsource/ubuntu/400.css';
+@import '@fontsource/ubuntu/500.css';
+@import '@fontsource/ubuntu/700.css';
+
+:root {
+  --font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bg-primary: #0b0f19;
+  --bg-card: #161f33;
+  --text-primary: #f0f4f8;
+  --text-muted: #94a3b8;
+  --accent-gold: #eab308;
+  --accent-cyan: #38bdf8;
+  --border-color: #1e293b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#app {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.time-display {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.phase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.phase-box {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.phase-box .label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Updated to pure monochrome text per your preference */
+.phase-box .val {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Markdown Documentation Typography */
+.markdown-body {
+  color: var(--text-primary);
+  font-family: inherit;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.3rem;
+}
+
+.markdown-body h1 { font-size: 1.5rem; }
+.markdown-body h2 { font-size: 1.25rem; }
+.markdown-body h3 { font-size: 1.1rem; }
+
+.markdown-body p {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.markdown-body ul, 
+.markdown-body ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-body li {
+  margin-bottom: 0.35rem;
+}
+
+.markdown-body code {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.875rem;
+  font-family: monospace;
+}
+
+.markdown-body pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.markdown-body pre {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.markdown-body a {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--border-color);
+}
+
+.markdown-body blockquote {
+  border-left: 2px solid var(--text-muted);
+  margin: 1rem 0;
+  padding-left: 1rem;
+  color: var(--text-muted);
+}
