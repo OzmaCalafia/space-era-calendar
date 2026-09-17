@@ -27,10 +27,10 @@ async function initDocsViewer(viewerElement) {
   if (!viewerElement) return;
 
   try {
-    // 1. Ensure KaTeX and GitHub Markdown CSS dependencies load cleanly
+    // 1. Ensure KaTeX, GitHub Markdown CSS, and alignment overrides load cleanly
     await loadDependencies();
 
-    // 2. Fetch raw canonical README.md
+    // 2. Fetch raw canonical README.md with cache buster
     const response = await fetch(`/README.md?t=${Date.now()}`);
     if (!response.ok) throw new Error(`HTTP ${response.status}: Failed to fetch README.md`);
     const markdownText = await response.text();
@@ -64,6 +64,13 @@ function loadDependencies() {
     injectCSS('katex-css', 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css');
     injectCSS('gh-markdown-css', 'https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-dark.min.css');
 
+    // Inject KaTeX table alignment override rule to fix GitHub CSS collision
+    injectStyleRule('katex-align-override', `
+      .markdown-body .katex .mtable .col-align-l { text-align: left !important; }
+      .markdown-body .katex .mtable .col-align-r { text-align: right !important; }
+      .markdown-body .katex .mtable .col-align-c { text-align: center !important; }
+    `);
+
     // Resolve immediately if KaTeX auto-render is already loaded
     if (window.renderMathInElement) {
       return resolve();
@@ -85,6 +92,15 @@ function injectCSS(id, href) {
     link.rel = 'stylesheet';
     link.href = href;
     document.head.appendChild(link);
+  }
+}
+
+function injectStyleRule(id, cssText) {
+  if (!document.getElementById(id)) {
+    const style = document.createElement('style');
+    style.id = id;
+    style.textContent = cssText;
+    document.head.appendChild(style);
   }
 }
 
