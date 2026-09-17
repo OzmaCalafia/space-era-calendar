@@ -48,7 +48,7 @@ To determine the exact Space Era year, designated as $Y$, apply the following fo
 **Interpreting the Calculated Integer ($Y$):**
 * If $Y > 0$, the value represents the SE Year (e.g., $Y = 80$ yields Year 80 SE).
 * If $Y = 0$, the designation is strictly Year 0.
-* If $Y < 0$, the absolute value represents the BSE Year (e.g., for a date before February 20, 1945, using $1945 - 1947 = -2$, yielding Year 2 BSE).
+* If $Y < 0$, the absolute value $\vert{}Y\vert{}$ represents the BSE Year (e.g., for a date before February 20, 1945, using $1945 - 1947 = -2$, yielding Year 2 BSE).
 
 **Conversion Examples:**
 * **Year 80 SE:** February 20, 2026 CE through February 19, 2027 CE $\rightarrow$ ($2026 - 1946 = 80$)
@@ -131,15 +131,15 @@ Systems migrating from Phase 1 to Phase 2 apply the following normative rules to
 * **3.3.4 Mechanism Independence:** CE leap day activation criteria and SE Phase 2 Leap Week activation criteria function independently.
 
 **System Divergence Profile (Years 80–90 SE)**
-* **Year 80 SE (2026–2027 CE):** Phase 1 = 365 days | Phase 2 = 364 days | Annual Variance = +1 day (Phase 1) | Configuration: Standard Baseline
-* **Year 81 SE (2027–2028 CE):** Phase 1 = 365 days | Phase 2 = 364 days | Annual Variance = +1 day (Phase 1) | Configuration: Standard Baseline
-* **Year 82 SE (2028–2029 CE):** Phase 1 = 366 days (Feb 29) | Phase 2 = 364 days | Annual Variance = +2 days (Phase 1) | Configuration: Phase 1 Intercalation Only
-* **Year 83 SE (2029–2030 CE):** Phase 1 = 365 days | Phase 2 = 364 days | Annual Variance = +1 day (Phase 1) | Configuration: Standard Baseline
-* **Year 84 SE (2030–2031 CE):** Phase 1 = 365 days | Phase 2 = 371 days (Leap Week) | Annual Variance = −6 days (Phase 1) | Configuration: Phase 2 Intercalation Only
-* **Year 85 SE (2031–2032 CE):** Phase 1 = 365 days | Phase 2 = 364 days | Annual Variance = +1 day (Phase 1) | Configuration: Standard Baseline
-* **Year 86 SE (2032–2033 CE):** Phase 1 = 366 days (Feb 29) | Phase 2 = 364 days | Annual Variance = +2 days (Phase 1) | Configuration: Phase 1 Intercalation Only
-* **Years 87–89 SE (2033–2036 CE):** Phase 1 = 365 days annually | Phase 2 = 364 days annually | Annual Variance = +1 day annually (Phase 1) | Configuration: Standard Baseline
-* **Year 90 SE (2036–2037 CE):** Phase 1 = 366 days (Feb 29) | Phase 2 = 371 days (Leap Week) | Annual Variance = −5 days (Phase 1) | Configuration: Simultaneous Intercalation Convergence
+* **Year 80 SE (2026–2027 CE):** Phase 1 = 365 days | Phase 2 = 364 days | Annual Variance = $+1$ day (Phase 1) | Configuration: Standard Baseline
+* **Year 81 SE (2027–2028 CE):** Phase 1 = 365 days | Phase 2 = 364 days | Annual Variance = $+1$ day (Phase 1) | Configuration: Standard Baseline
+* **Year 82 SE (2028–2029 CE):** Phase 1 = 366 days (Feb 29) | Phase 2 = 364 days | Annual Variance = $+2$ days (Phase 1) | Configuration: Phase 1 Intercalation Only
+* **Year 83 SE (2029–2030 CE):** Phase 1 = 365 days | Phase 2 = 364 days | Annual Variance = $+1$ day (Phase 1) | Configuration: Standard Baseline
+* **Year 84 SE (2030–2031 CE):** Phase 1 = 365 days | Phase 2 = 371 days (Leap Week) | Annual Variance = $-6$ days (Phase 1) | Configuration: Phase 2 Intercalation Only
+* **Year 85 SE (2031–2032 CE):** Phase 1 = 365 days | Phase 2 = 364 days | Annual Variance = $+1$ day (Phase 1) | Configuration: Standard Baseline
+* **Year 86 SE (2032–2033 CE):** Phase 1 = 366 days (Feb 29) | Phase 2 = 364 days | Annual Variance = $+2$ days (Phase 1) | Configuration: Phase 1 Intercalation Only
+* **Years 87–89 SE (2033–2036 CE):** Phase 1 = 365 days annually | Phase 2 = 364 days annually | Annual Variance = $+1$ day annually (Phase 1) | Configuration: Standard Baseline
+* **Year 90 SE (2036–2037 CE):** Phase 1 = 366 days (Feb 29) | Phase 2 = 371 days (Leap Week) | Annual Variance = $-5$ days (Phase 1) | Configuration: Simultaneous Intercalation Convergence
 
 ### 3.4 Drift Compensation Protocol
 Organizations executing a Phase 1 to Phase 2 transition calculate and compensate for accumulated temporal variance.
@@ -194,21 +194,13 @@ For historical dates where $\text{CE Year} \le 1945$:
 * January 1 through February 19: $\text{BSE Year} = 1947 - \text{CE Year}$
 
 **Conversion Examples:**
-* **Year 2026 CE**
-  * January 15, 2026 CE (Jan 1 – Feb 19): $2026 - 1947 = 79 \rightarrow$ Year 79 SE
-  * July 4, 2026 CE (Feb 20 – Dec 31): $2026 - 1946 = 80 \rightarrow$ Year 80 SE
-* **Year 2000 CE**
-  * January 15, 2000 CE (Jan 1 – Feb 19): $2000 - 1947 = 53 \rightarrow$ Year 53 SE
-  * March 15, 2000 CE (Feb 20 – Dec 31): $2000 - 1946 = 54 \rightarrow$ Year 54 SE
-* **Year 1800 CE**
-  * January 15, 1800 CE (Jan 1 – Feb 19): $1947 - 1800 = 147 \rightarrow$ Year 147 BSE
-  * July 4, 1800 CE (Feb 20 – Dec 31): $1946 - 1800 = 146 \rightarrow$ Year 146 BSE
-* **Year 1 CE**
-  * January 15, 1 CE (Jan 1 – Feb 19): $1947 - 1 = 1946 \rightarrow$ Year 1946 BSE
-  * March 15, 1 CE (Feb 20 – Dec 31): $1946 - 1 = 1945 \rightarrow$ Year 1945 BSE
-* **Year 1 BCE (Astronomical Year 0)**
-  * January 15, 1 BCE (Jan 1 – Feb 19): $1947 - 0 = 1947 \rightarrow$ Year 1947 BSE
-  * March 15, 1 BCE (Feb 20 – Dec 31): $1946 - 0 = 1946 \rightarrow$ Year 1946 BSE
+* **Year 80 SE:** February 20, 2026 CE through February 19, 2027 CE $\rightarrow$ ($2026 - 1946 = 80$)
+* **Year 1 SE:** February 20, 1947 CE through February 19, 1948 CE $\rightarrow$ ($1947 - 1946 = 1$)
+* **Year 0:** February 20, 1946 CE through February 19, 1947 CE $\rightarrow$ ($1946 - 1946 = 0$)
+* **Year 1 BSE:** February 20, 1945 CE through February 19, 1946 CE $\rightarrow$ ($1945 - 1946 = -1$)
+* **Year 1946 BSE:** February 20, 1 BCE through February 19, 1 CE $\rightarrow$ ($0 - 1946 = -1946$)
+
+The inclusion of Year 0 enables direct linear arithmetic; for example, the temporal span from Year 10 BSE to Year 10 SE evaluates precisely to 20 years.
 
 ### 5.2 Ordinal Day Component Mapping
 Day numbering within a Space Era year utilizes a 1-indexed ordinal position ($D$ within range $[1, N]$), where Day 1 corresponds to February 20 (the initial day of the SE annual cycle). Digital implementations operating on zero-based internal indexing add 1 for display.
@@ -221,9 +213,11 @@ Day numbering within a Space Era year utilizes a 1-indexed ordinal position ($D$
 
 **Phase 1 Ordinal Calculation:**  
 Because Phase 1 retains legacy CE month lengths and ordering, the ordinal day number ($N$) evaluates as:  
+
 $$N = (\text{Target Date} - \text{February 20}) + 1$$  
+
 *(where subtraction calculates elapsed days in the Common Era calendar)*  
-*Example:* July 31, 2026 CE evaluates to Year 80 SE, Day 162 (9 days in Feb + 31 + 30 + 31 + 30 + 31 = 162).
+*Example:* July 31, 2026 CE evaluates to Year 80 SE, Day 162 (9 days in Feb $+ 31 + 30 + 31 + 30 + 31 = 162$).
 
 **Phase 2 Ordinal-to-Month Translation:**  
 Under Phase 2, the annual cycle is restructured into a perennial 30-31-30 quarterly month pattern. Systems convert ordinal day numbers to Phase 2 month-and-day designations via static algorithmic lookup tables (refer to Appendix C: Phase 2 Date Conversion Tables).
