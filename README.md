@@ -186,7 +186,7 @@ To convert any CE calendar date, calculate the integer year value $Y$:
 **Era Designation Rules:**
 * If $Y > 0$, the value represents Year $Y$ SE.
 * If $Y = 0$, the designation is strictly Year 0.
-* If $Y < 0$, the absolute value $|Y|$ represents Year $|Y|$ BSE.
+* If $Y < 0$, the absolute value $\vert{}Y\vert{}$ represents Year $\vert{}Y\vert{}$ BSE.
 
 **Direct BSE Calculation (Historical Dates Prior to Year 0):**  
 For historical dates where $\text{CE Year} \le 1945$:
