@@ -31,7 +31,7 @@ async function initDocsViewer(viewerElement) {
     await loadDependencies();
 
     // 2. Fetch raw canonical README.md
-    const response = await fetch('/README.md');
+    const response = await fetch(`/README.md?t=${Date.now()}`);
     if (!response.ok) throw new Error(`HTTP ${response.status}: Failed to fetch README.md`);
     const markdownText = await response.text();
 
