@@ -9,7 +9,7 @@ export function createFooter() {
     <div style="color: var(--text-muted); line-height: 1.5;">
       Open-source timekeeping architecture & local-first software.
       <br />
-      Coded by <strong style="color: var(--text-primary);">Ozma Calafia [OC]</strong>.
+      Coded by <strong style="color: var(--text-primary);">Ozma Calafia [OC]™</strong>.
     </div>
     <div style="margin-top: 0.25rem;">
       <a 

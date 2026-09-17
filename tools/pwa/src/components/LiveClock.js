@@ -6,11 +6,18 @@ export function createLiveClock() {
 
   function render() {
     const se = store.getLiveConversion();
-    const utcNow = store.state.now.toUTCString();
+    const utcFormatted = store.state.now.toUTCString().replace(/\s*GMT$/, ' UTC');
 
     container.innerHTML = `
       <h2 style="font-weight: 500;">Live Space Era Clock</h2>
-      <div class="time-display">UTC: ${utcNow}</div>
+      
+      <!-- Earth Reference Box -->
+      <div class="phase-box" style="margin-bottom: 1rem;">
+        <span class="label">Earth Reference</span>
+        <span class="val">${utcFormatted}</span>
+      </div>
+
+      <!-- Space Era Phase Standard Boxes -->
       <div class="phase-grid">
         <div class="phase-box">
           <span class="label">Phase 1 Standard</span>

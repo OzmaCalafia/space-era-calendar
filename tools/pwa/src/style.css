@@ -79,14 +79,12 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* Updated to pure monochrome text per your preference */
 .phase-box .val {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-primary);
 }
 
-/* Markdown Documentation Typography */
 .markdown-body {
   color: var(--text-primary);
   font-family: inherit;
