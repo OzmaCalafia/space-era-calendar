@@ -111,7 +111,10 @@ Phase 2 replaces single-day intercalations with an invariant seven-day Leap Week
 **The Pax Intercalation Algorithm**  
 An SE year $Y$ receives a seven-day Leap Week if it satisfies the following mathematical conditions, where $y$ represents the two-digit year suffix ($y = Y \pmod{100}$):
 
-$$\text{LeapWeek}(Y) = \text{True} \quad \text{IF} \quad [(y \pmod{6} = 0 \quad \text{OR} \quad y = 99) \quad \text{AND NOT} \quad (y = 0 \quad \text{AND} \quad Y \pmod{400} \neq 0)]$$
+$$\begin{aligned}
+\text{LeapWeek}(Y) = \text{True} \quad &\text{IF} \quad [(y \pmod{6} = 0 \quad \text{OR} \quad y = 99) \\
+&\quad \text{AND NOT} \quad (y = 0 \quad \text{AND} \quad Y \pmod{400} \neq 0)]
+\end{aligned}$$
 
 $$\text{LeapWeek}(Y) = \text{False} \quad \text{OTHERWISE}$$
 
